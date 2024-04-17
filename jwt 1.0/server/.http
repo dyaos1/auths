@@ -1,0 +1,29 @@
+### get list (only in dev env)
+GET http://localhost:3000/auth/ HTTP/1.1
+
+
+### register
+POST http://localhost:3000/auth/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "hello",
+    "password": "world",
+    "password2": "world"
+}
+
+
+### login success
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "name": "hello",
+    "password": "world"
+}
+
+
+### verify and refresh token
+GET http://localhost:3000/auth/renew HTTP/1.1
+Authorization: Bearer put-token-here
+content-type: application/json
